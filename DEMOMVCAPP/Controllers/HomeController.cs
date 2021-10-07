@@ -8,7 +8,7 @@ namespace DEMOMVCAPP.Controllers
 {
     public class HomeController : Controller
     {
-
+       
         //comment added
         public ActionResult Index()
         {
@@ -26,6 +26,10 @@ namespace DEMOMVCAPP.Controllers
             return View();
         }
 
+        /// <summary>
+        /// sdjhsdujhsdjhjksd
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
