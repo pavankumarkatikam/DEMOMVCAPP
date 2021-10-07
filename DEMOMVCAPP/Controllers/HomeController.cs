@@ -13,10 +13,6 @@ namespace DEMOMVCAPP.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Comment added
-        /// </summary>
-        /// <returns></returns>
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
