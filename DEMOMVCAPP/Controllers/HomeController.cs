@@ -8,6 +8,8 @@ namespace DEMOMVCAPP.Controllers
 {
     public class HomeController : Controller
     {
+
+        //comment added
         public ActionResult Index()
         {
             return View();
