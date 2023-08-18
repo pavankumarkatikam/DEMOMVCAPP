@@ -14,7 +14,7 @@ jobs:
       - name: restore nuget packages
         run: nuget restore
       - name: build project
-        run: msbuild **/.sln /p:_PackageTempDir="\published\"
+        run: msbuild /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\"
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
