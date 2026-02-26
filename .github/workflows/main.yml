@@ -9,5 +9,15 @@ jobs:
     runs-on:
       - ubuntu-22.04
     steps:
+      - name: Validate tag
+        run: |
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
+            echo "Validating tag: $GITHUB_REF"
+            if [[ ! "$GITHUB_REF_NAME" =~ ^rc-[0-9]+\.[0-9]+\.[0-9]+-[0-9]+$ ]]; then
+              echo "::error::Invalid tag format. Required format: rc-<major>.<minor>.<patch>-<build> (e.g., rc-1.0.0-1)."
+              exit 1
+            else
+              echo "Please deploy using a tag, not a branch."
+            fi
       - name: test
         run: echo "$GITHUB_REF_NAME"
