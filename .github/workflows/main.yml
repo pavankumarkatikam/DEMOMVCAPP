@@ -19,5 +19,6 @@ jobs:
             else
               echo "Please deploy using a tag, not a branch."
             fi
+           fi
       - name: test
         run: echo "$GITHUB_REF_NAME"
