@@ -18,6 +18,7 @@ jobs:
               exit 1
             else
               echo "Please deploy using a tag, not a branch."
+              exit 1
             fi
            fi
       - name: test
