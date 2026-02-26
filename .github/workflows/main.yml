@@ -1,0 +1,13 @@
+name: test
+run-name: test workflow
+
+on: 
+ workflow_dispatch: 
+
+jobs:
+  testjob:
+    runs-on:
+      - ubuntu-22.04
+    steps:
+      - name: test
+        run: echo "$GITHUB_REF_NAME"
